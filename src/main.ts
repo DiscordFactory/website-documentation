@@ -14,8 +14,6 @@ const router = createRouter({
   ]
 })
 
-console.log(router.getRoutes())
-
 createApp(App)
   .use(router)
   .mount('#app')

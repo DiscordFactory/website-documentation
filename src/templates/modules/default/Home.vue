@@ -3,7 +3,6 @@
     <div class="mx-auto max-w-4xl h-full flex flex-col justify-center items-center px-6">
       <h1 class="font-semibold text-gray-800 dark:text-gray-200 text-5xl font-title tracking-tight md:text-7xl">A fully featured typescript framework <em>for</em> <span class="text-blue-900 dark:text-blue-800">Discord.js</span></h1>
       <p class="text-lg mt-8 text-gray-500 dark:text-gray-300 md:pr-18 md:text-xl">
-        AdonisJS includes everything you need to build a fully functional web application or API server. Don't waste hours downloading and assembling hundreds of packages - use Factory and get productive now.
         Discord Factory includes everything you need to create your discord bots. Don't reinvent the wheel, leverage it
       </p>
       <p class="text-lg mt-8 text-gray-500 dark:text-gray-300 md:pr-18 md:text-xl w-full">
@@ -23,8 +22,11 @@
       </div>
     </div>
   </div>
+  <div class="bg-text-white dark:bg-gray-900 py-10">
+    <Hightlight />
+  </div>
 </template>
 
-<script setup lang='ts'>
-
+<script setup lang="ts">
+import Hightlight from '../../../components/Hightlight.vue'
 </script>
