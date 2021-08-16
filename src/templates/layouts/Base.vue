@@ -1,5 +1,8 @@
 <template>
-  <RouterView />
+  <Navbar />
+  <div class="pt-[64px] bg-white dark:bg-gray-800 transition duration-300 min-h-screen">
+    <RouterView />
+  </div>
   <button
     @click.prevent="toggle()"
     class="fixed z-50 bottom-5 left-5 w-10 h-10 border-2 rounded focus:outline-none"
@@ -17,7 +20,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-
+import Navbar from '../../components/Navbar.vue'
 let htmlStatut = ref(false)
 
 onMounted(() => {
@@ -39,5 +42,8 @@ function isDark () {
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap');
+body {
+  font-family: 'Public Sans', sans-serif;
+}
 </style>
