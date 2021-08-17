@@ -6,9 +6,9 @@
         <ExclamationIcon class="h-5 w-5 text-yellow-400" aria-hidden="true" />
       </div>
       <div class="ml-3">
-        <h3 class="text-sm font-medium text-yellow-800">
+        <p class="text-sm font-medium text-yellow-800">
           <slot name="label" />
-        </h3>
+        </p>
         <div class="mt-2 text-sm text-yellow-700">
           <p>
             <slot name="message" />
