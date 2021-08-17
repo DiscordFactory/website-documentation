@@ -18,14 +18,14 @@
                 </span>
               </div>
               <div class="min-w-0 flex-1">
-                <h3 class="text-gray-900 dark:text-gray-200 text-base font-medium text-gray-900">
+                <p class="text-gray-900 dark:text-gray-200 text-base font-medium text-gray-900">
                   <span class="rounded-sm">
                     <router-link :to="link.path" class="focus:outline-none">
                       <span class="absolute inset-0" aria-hidden="true" />
                       {{ link.title }}
                     </router-link>
                   </span>
-                </h3>
+                </p>
                 <p class="text-base text-gray-500">{{ link.description }}</p>
               </div>
               <div class="flex-shrink-0 self-center">
