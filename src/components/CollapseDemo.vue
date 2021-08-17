@@ -1,12 +1,20 @@
 <template>
   <div class="flex space-x-5">
-    <div class="w-2/5">
+    <div class="w-1/2">
       <Collapse
         :items="collapseHighlighting"
         @handleChange="handleChange" />
     </div>
-    <div class="w-3/5">
-      <CodeHighlight v-if="renderComponent" :code="currentFrame" />
+    <div class="flex w-1/2 bg-[#263238] rounded-lg overflow-hidden">
+      <transition
+        enter-active-class="transition ease-out duration-300"
+        enter-from-class="transform opacity-0"
+        enter-to-class="transform opacity-100"
+        leave-active-class="transition ease-in duration-300"
+        leave-from-class="transform opacity-100"
+        leave-to-class="transform opacity-0">
+        <CodeHighlight class="h-full" v-if="renderComponent" :code="currentFrame" />
+      </transition>
     </div>
   </div>
 </template>
@@ -15,7 +23,7 @@
 import Collapse from './Collapse.vue'
 import CodeHighlight from './CodeHighlight.vue'
 import { ref, computed, nextTick } from 'vue'
-import { command, event, slashCommand } from '../utils/CodeHighlignt'
+import { command, event, middleware, slashCommand } from '../utils/CodeHighlignt'
 
 let activeFrame = ref(0)
 let renderComponent = ref(true);
@@ -46,6 +54,11 @@ const collapseHighlighting = [
     label: 'Slash commands',
     description: 'The use of commands has become commonplace in the world of discord robots, it is important to be able to create your own commands quickly and efficiently. Discord Factory provides you with a command that allows you to easily generate ready-to-use command files.',
     code: slashCommand,
-  }
+  },
+  {
+    label: 'Middlewares',
+    description: 'Middlewares are fragments of code that intervene upstream of one or several commands in order to authorise or not the execution. These fragments are governed by a regex that will allow you to create a single business logic applicable to the associated commands.',
+    code: middleware,
+  },
 ]
 </script>

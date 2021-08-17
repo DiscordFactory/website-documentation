@@ -23,9 +23,9 @@ pre[class*="language-"] {
   word-wrap: normal;
   color: #c3cee3;
   background: #263238;
-  font-family: Roboto Mono, monospace;
-  font-size: 1em;
-  line-height: 1.5em;
+  font-family: Jetbrains Mono, Roboto Mono, monospace;
+  font-size: 0.9em;
+  line-height: 1.8em;
   -moz-tab-size: 2;
   -o-tab-size: 2;
   tab-size: 2;
@@ -33,7 +33,7 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  @apply rounded-md h-full;
+  @apply rounded-md;
 }
 
 code[class*="language-"]::-moz-selection,
@@ -59,8 +59,8 @@ pre[class*="language-"] ::selection {
 pre[class*="language-"] {
   overflow: auto;
   position: relative;
-  margin: 0.5em 0;
-  padding: 0 1em;
+  padding: 0 1em 1.8rem;
+  margin: 0;
 }
 
 .language-css > code,

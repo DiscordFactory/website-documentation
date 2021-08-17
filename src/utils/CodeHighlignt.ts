@@ -33,8 +33,8 @@ import { Message, CommandInteraction } from 'discord.js'
 scope: ['guild id'], // or 'GLOBAL'
 roles: ['role id'],
   options: {
-    name: 'send-ticket',
-    description: 'SendEmbed ticket description',
+    name: 'foo',
+    description: 'Foo description',
     options: [],
   },
 })
@@ -43,3 +43,18 @@ export default class FooSlashCommand implements BaseSlashCommand {
     // Your code here
   }
 }`
+
+export const middleware = `
+import {
+  Middleware,
+  BaseMiddleware,
+  MiddlewareContext 
+} from '@discord-factory/core'
+
+@Middleware({ pattern: '(?<count>\\\\d+)-args')}
+export default class FooMiddleware implements BaseMiddleware {
+  public async run(context: MiddlewareContext): Promise<void> {
+    // Your code here
+  }
+}
+`
