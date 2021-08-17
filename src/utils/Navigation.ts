@@ -4,7 +4,7 @@ import { github, twitter } from './Icons'
 export const links: NavbarLink[] = [
   { label: 'Home', path: '/', local: true },
   { label: 'Documentation', path: '/documentation', local: true },
-  { label: 'Github', path: '/', local: false }
+  { label: 'Discussion', path: '/https://github.com/DiscordFactory/Core/discussions', local: false }
 ]
 
 export const socials = [
