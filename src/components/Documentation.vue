@@ -136,9 +136,9 @@
         </button>
       </div>
       <main class="flex-1 relative z-0  focus:outline-none">
-        <div class="py-6">
+        <div class="py-6 space-y-5">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">{{ title }}</h1>
+            <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">{{ title }}</h1>
           </div>
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <slot />
@@ -154,13 +154,16 @@
         <div class="flex-1 flex flex-col min-h-0 border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300">
           <div class="flex-1 flex flex-col pt-5 pb-4 ">
             <nav class="mt-5 flex-1 px-2 space-y-1">
-              <p class="pb-3">Sommaire</p>
+              <div class="pb-3 flex space-x-2">
+                <MenuAlt2Icon class="h6 w-6" />
+                <p>Sommaire</p>
+              </div>
               <button
                 v-for="item in toc"
                 :key="item.label"
                 @click.prevent="scrollMeTo(item.id)"
                 class="text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 transition duration-200 group flex items-center px-2 text-base font-medium rounded-md w-full focus:outline-none text-sm">
-                {{ item.label }}
+                • {{ item.label }}
               </button>
             </nav>
           </div>
@@ -174,7 +177,7 @@
 import { onMounted, ref } from 'vue'
 import { Dialog, DialogOverlay, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { documentation } from '../utils/Navigation'
-import { CalendarIcon, ChartBarIcon, FolderIcon, HomeIcon, InboxIcon, MenuIcon, UsersIcon, XIcon } from '@heroicons/vue/outline'
+import { CalendarIcon, ChartBarIcon, FolderIcon, HomeIcon, InboxIcon, MenuIcon, UsersIcon, XIcon, MenuAlt2Icon } from '@heroicons/vue/outline'
 
 defineProps<{
   title: string
