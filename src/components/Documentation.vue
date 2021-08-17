@@ -156,7 +156,7 @@
             <nav class="mt-5 flex-1 px-2 space-y-1">
               <div class="pb-3 flex space-x-2">
                 <MenuAlt2Icon class="h6 w-6 dark:text-gray-400" />
-                <p class="dark:text-gray-400">Sommaire</p>
+                <p class="dark:text-gray-400">Summary</p>
               </div>
               <button
                 v-for="item in toc"
@@ -209,23 +209,23 @@ h1 {
   color: #204977;
 }
 h2 {
-  @apply text-3xl leading-10;
+  @apply text-3xl leading-10 pt-10;
   color: #204977;
 }
 h3 {
-  @apply text-2xl leading-10;
+  @apply text-2xl leading-10 pt-10;
   color: #204977;
 }
 h4 {
-  @apply text-2xl leading-10;
+  @apply text-2xl leading-10 pt-10;
   color: #204977;
 }
 h5 {
-  @apply text-xl leading-10;
+  @apply text-xl leading-10 pt-10;
   color: #204977;
 }
 h6 {
-  @apply text-lg leading-10;
+  @apply text-lg leading-10 pt-10;
   color: #204977;
 }
 ul {
