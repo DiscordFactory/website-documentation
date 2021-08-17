@@ -1,8 +1,8 @@
 import { RouteRecordRaw } from 'vue-router'
-import Home from './Home.vue'
+import Index from './index.vue'
 
 const routes: RouteRecordRaw[] = [
-  { path: '/', component: Home },
+  { path: '/documentation', component: Index },
 ]
 
 export default routes

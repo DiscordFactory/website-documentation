@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <Disclosure as="nav" class="fixed top-0 left-0 w-screen bg-white dark:bg-gray-900 transition duration-200 shadow" v-slot="{ open }">
+  <Disclosure as="nav" class="fixed z-50 top-0 left-0 w-screen bg-white dark:bg-gray-900 transition duration-200 shadow" v-slot="{ open }">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
