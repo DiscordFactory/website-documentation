@@ -140,7 +140,7 @@
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">{{ title }}</h1>
           </div>
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 dark:text-gray-400">
             <slot />
           </div>
         </div>
@@ -155,8 +155,8 @@
           <div class="flex-1 flex flex-col pt-5 pb-4 ">
             <nav class="mt-5 flex-1 px-2 space-y-1">
               <div class="pb-3 flex space-x-2">
-                <MenuAlt2Icon class="h6 w-6" />
-                <p>Sommaire</p>
+                <MenuAlt2Icon class="h6 w-6 dark:text-gray-400" />
+                <p class="dark:text-gray-400">Sommaire</p>
               </div>
               <button
                 v-for="item in toc"

@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="bg-white dark:bg-gray-900 py-10 sm:pt-14 sm:pb-32">
-    <div class="max-w-8xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <Hightlight />
     </div>
   </div>
@@ -43,5 +43,4 @@
 <script setup lang="ts">
 import Hightlight from '../../../components/Hightlight.vue'
 import CollapseDemo from '../../../components/CodeDemo.vue'
-
 </script>
