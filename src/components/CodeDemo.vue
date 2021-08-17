@@ -1,11 +1,11 @@
 <template>
-  <div class="flex space-x-5">
-    <div class="w-1/2">
+  <div class="px-5 sm:px-0 flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5">
+    <div class="sm:w-1/2">
       <Collapse
         :items="collapseHighlighting"
         @handleChange="handleChange" />
     </div>
-    <div class="flex w-1/2 bg-[#263238] rounded-lg overflow-hidden">
+    <div class="flex sm:w-1/2 bg-[#263238] rounded-lg overflow-hidden">
       <transition
         enter-active-class="transition ease-out duration-300"
         enter-from-class="transform opacity-0"

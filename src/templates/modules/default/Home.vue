@@ -22,12 +22,18 @@
       </div>
     </div>
   </div>
-  <div class="bg-white dark:bg-gray-900 py-20">
+  <div class="bg-white dark:bg-gray-900 py-10 sm:pt-14 sm:pb-32">
     <div class="max-w-8xl mx-auto">
       <Hightlight />
     </div>
   </div>
-  <div class="bg-white dark:bg-gray-900 py-10">
+  <div class="bg-white dark:bg-gray-900 py-10 space-y-20">
+    <div class="px-5 sm:px-0 text-center md:max-w-3xl md:mx-auto md:px-12">
+      <h2 class="text-gray-800 dark:text-gray-200 text-3xl sm:text-4xl font-title font-semibold md:text-6xl">All discord.js features in one place</h2>
+      <p class="text-lg mt-8 text-gray-500 md:text-xl">
+        AdonisJS is not a minimalist framework. To give your projects a head start, we pack many baseline features within the core of the framework.
+      </p>
+    </div>
     <div class="max-w-6xl mx-auto">
       <CollapseDemo />
     </div>
@@ -36,6 +42,6 @@
 
 <script setup lang="ts">
 import Hightlight from '../../../components/Hightlight.vue'
-import CollapseDemo from '../../../components/CollapseDemo.vue'
+import CollapseDemo from '../../../components/CodeDemo.vue'
 
 </script>
