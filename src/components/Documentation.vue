@@ -162,7 +162,7 @@
                 v-for="item in toc"
                 :key="item.label"
                 @click.prevent="scrollMeTo(item.id)"
-                class="text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 transition duration-200 group flex items-center px-2 text-base font-medium rounded-md w-full focus:outline-none text-sm">
+                class="text-left text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 transition duration-200 group flex items-center px-2 text-base font-medium rounded-md w-full focus:outline-none text-sm">
                 • {{ item.label }}
               </button>
             </nav>
