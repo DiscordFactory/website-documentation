@@ -9,11 +9,6 @@
     <p>
       Creation, Structural, Behavioural or even Singleton, you can finally choose your own design pattern without being forced to modify the whole functioning of your project.
     </p>
-    <h2>The framework highlights 3 essential aspects for a developer:</h2>
-    <h3>The framework highlights 3 essential aspects for a developer:</h3>
-    <h4>The framework highlights 3 essential aspects for a developer:</h4>
-    <h5>The framework highlights 3 essential aspects for a developer:</h5>
-    <h6>The framework highlights 3 essential aspects for a developer:</h6>
     <ul>
       <li>🧪 Mode flexibility, no limits. You are free to create your own architecture.</li>
       <li>⚡ Factory includes "in memory" compilation to make the compilation of your application more efficient.</li>
