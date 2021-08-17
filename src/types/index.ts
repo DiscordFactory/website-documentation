@@ -3,3 +3,11 @@ export type NavbarLink = {
   path: string
   local: boolean
 }
+
+type CollapseItem = {
+  label: string
+  description: string
+}
+export type Collapse = {
+  items: CollapseItem[]
+}

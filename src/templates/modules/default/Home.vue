@@ -22,11 +22,20 @@
       </div>
     </div>
   </div>
-  <div class="bg-text-white dark:bg-gray-900 py-10">
-    <Hightlight />
+  <div class="bg-white dark:bg-gray-900 py-20">
+    <div class="max-w-8xl mx-auto">
+      <Hightlight />
+    </div>
+  </div>
+  <div class="bg-white dark:bg-gray-900 py-10">
+    <div class="max-w-6xl mx-auto">
+      <CollapseDemo />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import Hightlight from '../../../components/Hightlight.vue'
+import CollapseDemo from '../../../components/CollapseDemo.vue'
+
 </script>
