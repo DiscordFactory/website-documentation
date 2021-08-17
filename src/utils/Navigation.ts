@@ -22,6 +22,7 @@ export const documentation = [
       { label: 'Starting', href: '/documentation/starting', isMenu: false },
       { label: 'Environment', href: '/documentation/environment', isMenu: false },
       { label: 'Structure', href: '/documentation/structure', isMenu: false },
+      { label: 'Commands', href: '/documentation/commands', isMenu: false },
     ]
   },
 ]
