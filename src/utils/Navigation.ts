@@ -21,6 +21,7 @@ export const documentation = [
       { label: 'Getting starting', href: '/documentation/getting-started', isMenu: false },
       { label: 'Starting', href: '/documentation/starting', isMenu: false },
       { label: 'Environment', href: '/documentation/environment', isMenu: false },
+      { label: 'Structure', href: '/documentation/structure', isMenu: false },
     ]
   },
 ]

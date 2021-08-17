@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import Documentation from '../../../components/Documentation.vue'
+import Documentation from '../../../../components/Documentation.vue'
 
 </script>
 

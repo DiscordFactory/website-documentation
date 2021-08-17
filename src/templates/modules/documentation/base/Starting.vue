@@ -78,11 +78,11 @@
 </template>
 
 <script setup lang="ts">
-import Documentation from '../../../components/Documentation.vue'
-import CodeHighlight from '../../../components/CodeHighlight.vue'
-import Divider from '../../../components/Divider.vue'
-import LinkExternal from '../../../components/LinkExternal.vue'
-import AlertWarn from '../../../components/AlertWarn.vue'
-import AlertSuccess from '../../../components/AlertSuccess.vue'
-import AlertInfo from '../../../components/AlertInfo.vue'
+import Documentation from '../../../../components/Documentation.vue'
+import CodeHighlight from '../../../../components/CodeHighlight.vue'
+import Divider from '../../../../components/Divider.vue'
+import LinkExternal from '../../../../components/LinkExternal.vue'
+import AlertWarn from '../../../../components/AlertWarn.vue'
+import AlertSuccess from '../../../../components/AlertSuccess.vue'
+import AlertInfo from '../../../../components/AlertInfo.vue'
 </script>

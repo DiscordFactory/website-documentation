@@ -233,4 +233,8 @@ ul {
     @apply leading-8
   }
 }
+code.active {
+  @apply px-1.5 py-0.5 rounded-md bg-gray-200;
+}
+
 </style>
