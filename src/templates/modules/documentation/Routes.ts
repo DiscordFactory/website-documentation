@@ -7,6 +7,7 @@ import Command from './base/Command.vue'
 import Event from './base/Event.vue'
 import Middleware from './base/Middleware.vue'
 import Hook from './base/Hook.vue'
+import Deployment from './advanced/Deployment.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/documentation/getting-started', component: GettingStarted },
@@ -17,6 +18,8 @@ const routes: RouteRecordRaw[] = [
   { path: '/documentation/events', component: Event },
   { path: '/documentation/middlewares', component: Middleware },
   { path: '/documentation/hooks', component: Hook },
+
+  { path: '/documentation/deployment', component: Deployment },
 ]
 
 export default routes

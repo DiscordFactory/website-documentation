@@ -28,4 +28,11 @@ export const documentation = [
       { label: 'Hooks', href: '/documentation/hooks', isMenu: false },
     ]
   },
+  {
+    label: 'Advanced',
+    isMenu: true,
+    child: [
+      { label: 'Deployment', href: '/documentation/deployment', isMenu: false },
+    ]
+  },
 ]
