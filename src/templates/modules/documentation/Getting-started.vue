@@ -1,5 +1,5 @@
 <template>
-  <Documentation title="Dashboard">
+  <Documentation title="Getting started">
     <p>
       Are you tired of reinventing the wheel at the start of each project, and of spending too much time on how your bot will work?
     </p>
