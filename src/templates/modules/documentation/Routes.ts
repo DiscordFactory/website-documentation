@@ -1,8 +1,8 @@
 import { RouteRecordRaw } from 'vue-router'
-import GettingStarted from './getting-started.vue'
+import GettingStarted from './Getting-started.vue'
 
 const routes: RouteRecordRaw[] = [
-  { path: '/documentation/getting-started', component: GettingStarted },
+  { path: '/documentation/Getting-started', component: GettingStarted },
 ]
 
 export default routes

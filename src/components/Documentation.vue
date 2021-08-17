@@ -138,9 +138,9 @@
       <main class="flex-1 relative z-0  focus:outline-none">
         <div class="py-6 space-y-5">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <h1 class="text-4xl font-semibold text-gray-900 dark:text-white">{{ title }}</h1>
+            <h1 class="text-4xl font-semibold text-[#204977] dark:text-white">{{ title }}</h1>
           </div>
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 dark:text-gray-400">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 dark:text-gray-400 space-y-6">
             <slot />
           </div>
         </div>
@@ -203,3 +203,34 @@ function scrollMeTo (refName) {
 }
 
 </script>
+
+<style lang="scss">
+h1 {
+  color: #204977;
+}
+h2 {
+  @apply text-3xl leading-10;
+  color: #204977;
+}
+h3 {
+  @apply text-2xl leading-10;
+  color: #204977;
+}
+h4 {
+  @apply text-2xl leading-10;
+  color: #204977;
+}
+h5 {
+  @apply text-xl leading-10;
+  color: #204977;
+}
+h6 {
+  @apply text-lg leading-10;
+  color: #204977;
+}
+ul {
+  li {
+    @apply leading-8
+  }
+}
+</style>
