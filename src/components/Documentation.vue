@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="sm:fixed z-40 top-0 left-0 sm:pt-[64px] h-screen flex overflow-hidden bg-gray-100">
+  <div class="z-40 top-0 left-0 w-full min-h-screen flex bg-gray-100">
     <TransitionRoot as="template" :show="sidebarOpen">
       <Dialog
         as="div"
@@ -43,7 +43,7 @@
                 </button>
               </div>
             </TransitionChild>
-            <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+            <div class="flex-1 h-0 pt-5 pb-4 ">
               <div class="flex-shrink-0 flex items-center px-4">
                 <img
                   class="h-8 w-auto"
@@ -98,11 +98,11 @@
     </TransitionRoot>
 
     <!-- Static sidebar for desktop -->
-    <div class="hidden md:flex md:flex-shrink-0">
+    <div class="hidden sm:fixed pt-[64px] top-0 left-0 h-full md:flex md:flex-shrink-0">
       <div class="flex flex-col w-64">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300">
-          <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+          <div class="flex-1 flex flex-col pt-5 pb-4 ">
             <nav class="mt-5 flex-1 px-2">
               <template v-for="item in documentation">
                 <div v-if="item.isMenu">
@@ -111,7 +111,7 @@
                     v-for="link in item.child"
                     :key="link.label"
                     :to="link.href"
-                    class="text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 transition duration-200 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                    class="w-full text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 transition duration-200 group flex items-center px-2 py-2 text-base font-medium rounded-md">
                     {{ link.label }}
                   </router-link>
                 </div>
@@ -119,7 +119,7 @@
                   v-else
                   :key="item.name"
                   :to="item.href"
-                  :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'group flex items-center px-2 py-2 text-base font-medium rounded-md']">
+                  :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'w-full group flex items-center px-2 py-2 text-base font-medium rounded-md']">
                   {{ item.label }}
                 </router-link>
               </template>
@@ -128,47 +128,75 @@
         </div>
       </div>
     </div>
-    <div class="flex flex-col w-0 flex-1 overflow-hidden">
+    <div class="px-64 mx-auto flex flex-col flex-1 bg-gray-100 dark:bg-gray-800 dark:text-gray-600">
       <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
         <button type="button" class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="sidebarOpen = true">
           <span class="sr-only">Open sidebar</span>
           <MenuIcon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none">
+      <main class="flex-1 relative z-0  focus:outline-none">
         <div class="py-6">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+            <h1 class="text-2xl font-semibold text-gray-900 dark:text-white">{{ title }}</h1>
           </div>
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <!-- Replace with your content -->
-            <div class="py-4">
-              <div class="border-4 border-dashed border-gray-200 rounded-lg h-96" />
-            </div>
-            <!-- /End replace -->
+            <slot />
           </div>
         </div>
       </main>
+    </div>
+
+    <!-- Static toc for desktop -->
+    <div class="hidden sm:fixed top-0 right-0 pt-[64px] h-full md:flex md:flex-shrink-0">
+      <div class="flex flex-col w-64">
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+        <div class="flex-1 flex flex-col min-h-0 border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300">
+          <div class="flex-1 flex flex-col pt-5 pb-4 ">
+            <nav class="mt-5 flex-1 px-2 space-y-1">
+              <p class="pb-3">Sommaire</p>
+              <button
+                v-for="item in toc"
+                :key="item.label"
+                @click.prevent="scrollMeTo(item.id)"
+                class="text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 transition duration-200 group flex items-center px-2 text-base font-medium rounded-md w-full focus:outline-none text-sm">
+                {{ item.label }}
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { Dialog, DialogOverlay, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { documentation } from '../utils/Navigation'
-import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
-  MenuIcon,
-  UsersIcon,
-  XIcon,
-} from '@heroicons/vue/outline'
+import { CalendarIcon, ChartBarIcon, FolderIcon, HomeIcon, InboxIcon, MenuIcon, UsersIcon, XIcon } from '@heroicons/vue/outline'
 
-console.log(documentation)
+defineProps<{
+  title: string
+}>()
 
 const sidebarOpen = ref(false)
+
+let toc = ref(null)
+onMounted(() => {
+  const elements = document.querySelectorAll('h2, h3, h4, h5, h6')
+  elements.forEach((element: HTMLElement) => element.id = `anchor-${element.innerText}`)
+  toc.value = Array.from(elements).map((element: HTMLElement) => ({
+    label: element.innerText,
+    id: `anchor-${element.innerText}`
+  }))
+})
+
+function scrollMeTo (refName) {
+  const element = document.getElementById(refName)
+  const top = element.offsetTop;
+
+  window.scroll(0, top - 64);
+}
+
 </script>

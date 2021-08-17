@@ -54,7 +54,8 @@ import {
 @Middleware({ pattern: '(?<count>\\\\d+)-args')}
 export default class FooMiddleware implements BaseMiddleware {
   public async run(context: MiddlewareContext): Promise<void> {
-    // Your code here
+    // Your code here 
+    return true
   }
 }
 `

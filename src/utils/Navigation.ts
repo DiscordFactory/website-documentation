@@ -4,7 +4,7 @@ import { CalendarIcon, ChartBarIcon, FolderIcon, HomeIcon, InboxIcon, UsersIcon 
 
 export const links: NavbarLink[] = [
   { label: 'Home', path: '/', local: true },
-  { label: 'Documentation', path: '/documentation', local: true },
+  { label: 'Documentation', path: '/documentation/getting-started', local: true },
   { label: 'Discussion', path: '/https://github.com/DiscordFactory/Core/discussions', local: false }
 ]
 
@@ -18,7 +18,7 @@ export const documentation = [
     label: 'Basic',
     isMenu: true,
     child: [
-      { label: 'Getting starting', href: '/documentation/getting-starting', isMenu: true },
+      { label: 'Getting starting', href: '/documentation/getting-started', isMenu: true },
     ]
   },
 ]

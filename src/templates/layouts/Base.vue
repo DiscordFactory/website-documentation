@@ -44,9 +44,10 @@ function isDark () {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap');
-body {
+html, body {
   font-family: 'Public Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 </style>
