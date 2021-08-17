@@ -20,6 +20,7 @@ export const documentation = [
     child: [
       { label: 'Getting starting', href: '/documentation/getting-started', isMenu: false },
       { label: 'Starting', href: '/documentation/starting', isMenu: false },
+      { label: 'Environment', href: '/documentation/environment', isMenu: false },
     ]
   },
 ]
