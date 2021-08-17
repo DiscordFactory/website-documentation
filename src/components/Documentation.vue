@@ -103,7 +103,7 @@
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300">
           <div class="flex-1 flex flex-col pt-5 pb-4 ">
-            <nav class="mt-5 flex-1 px-2">
+            <nav class="mt-5 flex-1 px-2 space-y-5">
               <template v-for="item in documentation">
                 <div v-if="item.isMenu">
                   <p class="text-blue-900 dark:text-gray-600 font-bold">{{ item.label }}</p>
