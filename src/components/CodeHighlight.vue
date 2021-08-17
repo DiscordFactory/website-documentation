@@ -1,5 +1,5 @@
 <template>
-  <Prism language="typescript">{{ code }}</Prism>
+  <Prism :language="language">{{ code.trim() }}</Prism>
 </template>
 
 <script setup lang='ts'>
@@ -8,9 +8,15 @@ import 'prismjs/components/prism-typescript'
 // @ts-ignore
 import Prism from 'vue-prism-component'
 
-defineProps<{
+type Props = {
+  language?: string
   code: string
-}>()
+}
+
+withDefaults(defineProps<Props>(), {
+  language: 'typescript',
+  code: ''
+})
 </script>
 
 <style lang="scss">
@@ -59,7 +65,7 @@ pre[class*="language-"] ::selection {
 pre[class*="language-"] {
   overflow: auto;
   position: relative;
-  padding: 0 1em 1.8rem;
+  padding: .5rem 1em .5rem;
   margin: 0;
 }
 

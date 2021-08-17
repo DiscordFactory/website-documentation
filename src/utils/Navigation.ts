@@ -18,7 +18,8 @@ export const documentation = [
     label: 'Basic',
     isMenu: true,
     child: [
-      { label: 'Getting starting', href: '/documentation/getting-started', isMenu: true },
+      { label: 'Getting starting', href: '/documentation/getting-started', isMenu: false },
+      { label: 'Starting', href: '/documentation/starting', isMenu: false },
     ]
   },
 ]
