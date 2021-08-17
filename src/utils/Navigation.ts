@@ -24,6 +24,7 @@ export const documentation = [
       { label: 'Structure', href: '/documentation/structure', isMenu: false },
       { label: 'Commands', href: '/documentation/commands', isMenu: false },
       { label: 'Events', href: '/documentation/events', isMenu: false },
+      { label: 'Middlewares', href: '/documentation/middlewares', isMenu: false },
     ]
   },
 ]
