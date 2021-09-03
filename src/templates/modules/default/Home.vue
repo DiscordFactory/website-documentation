@@ -37,10 +37,17 @@
     <div class="max-w-6xl mx-auto">
       <CollapseDemo />
     </div>
+    <cta-split-image />
+    <div class="max-w-7xl mx-auto">
+      <Stats />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import Hightlight from '../../../components/Hightlight.vue'
 import CollapseDemo from '../../../components/CodeDemo.vue'
+import CtaSplitImage from '../../../components/CtaSplitImage.vue'
+import Stats from '../../../components/Stats.vue'
+
 </script>

@@ -15,6 +15,6 @@ export default defineConfig({
   plugins: [
     formsPlugin,
     require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
+    require('windicss/plugin/aspect-ratio'),
   ],
 })
