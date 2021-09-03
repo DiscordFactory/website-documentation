@@ -59,7 +59,7 @@
           In the docker section, replace <br />
             - <span class="font-bold">[name]</span> with the name of your bot, <br />
             - <span class="font-bold">[version]</span> with the version of your bot. (You can use `latest`, `dev`... with docker) <br />
-            - <span class="font-bold">[env]</span> with your env file (`.env`, `environment.json` or `environment.yml`)
+            - <span class="font-bold">[env]</span> with your env file (`environment.json` or `environment.yml`)
         </template>
       </AlertWarn>
       <p>Create a root file named <code class="active">Dockerfile</code>.</p>
