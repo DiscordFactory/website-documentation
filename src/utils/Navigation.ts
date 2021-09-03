@@ -23,6 +23,7 @@ export const documentation = [
       { label: 'Environment', href: '/documentation/environment', isMenu: false },
       { label: 'Structure', href: '/documentation/structure', isMenu: false },
       { label: 'Commands', href: '/documentation/commands', isMenu: false },
+      { label: 'Slash Commands', href: '/documentation/slash-commands', isMenu: false },
       { label: 'Events', href: '/documentation/events', isMenu: false },
       { label: 'Middlewares', href: '/documentation/middlewares', isMenu: false },
       { label: 'Hooks', href: '/documentation/hooks', isMenu: false },

@@ -4,6 +4,7 @@ import Starting from './base/Starting.vue'
 import Environment from './base/Environment.vue'
 import Structure from './base/Structure.vue'
 import Command from './base/Command.vue'
+import SlashCommand from './base/SlashCommand.vue'
 import Event from './base/Event.vue'
 import Middleware from './base/Middleware.vue'
 import Hook from './base/Hook.vue'
@@ -15,6 +16,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/documentation/environment', component: Environment },
   { path: '/documentation/structure', component: Structure },
   { path: '/documentation/commands', component: Command },
+  { path: '/documentation/slash-commands', component: SlashCommand },
   { path: '/documentation/events', component: Event },
   { path: '/documentation/middlewares', component: Middleware },
   { path: '/documentation/hooks', component: Hook },
