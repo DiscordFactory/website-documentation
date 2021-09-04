@@ -99,13 +99,13 @@
 
     <!-- Static sidebar for desktop -->
     <div class="hidden sm:fixed pt-[64px] top-0 left-0 h-full md:flex md:flex-shrink-0">
-      <div class="flex flex-col w-64">
+      <div class="flex flex-col w-96">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300">
           <div class="flex-1 flex flex-col pt-5 pb-4 ">
             <nav class="mt-5 flex-1 px-2 space-y-5">
               <template v-for="item in documentation">
-                <div v-if="item.isMenu">
+                <div v-if="item.isMenu" class="w-1/2 ml-auto">
                   <p class="text-blue-900 dark:text-gray-600 font-bold">{{ item.label }}</p>
                   <router-link
                     v-for="link in item.child"
@@ -128,7 +128,7 @@
         </div>
       </div>
     </div>
-    <div class="px-64 mx-auto flex flex-col flex-1 bg-gray-100 dark:bg-gray-800 dark:text-gray-600">
+    <div class="px-96 mx-auto flex flex-col flex-1 bg-gray-100 dark:bg-gray-800 dark:text-gray-600">
       <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
         <button type="button" class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="sidebarOpen = true">
           <span class="sr-only">Open sidebar</span>
