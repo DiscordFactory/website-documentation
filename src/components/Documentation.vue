@@ -115,13 +115,14 @@
                     {{ link.label }}
                   </router-link>
                 </div>
-                <router-link
-                  v-else
-                  :key="item.name"
-                  :to="item.href"
-                  :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'w-1/2 ml-auto group flex items-center py-2 text-base font-medium rounded-md']">
-                  {{ item.label }}
-                </router-link>
+                <div v-else class="w-1/2 ml-auto">
+                  <router-link
+                    :key="item.name"
+                    :to="item.href"
+                    :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'group flex items-center py-2 text-base font-medium rounded-md']">
+                    {{ item.label }}
+                  </router-link>
+                </div>
               </template>
             </nav>
           </div>
@@ -179,9 +180,7 @@ import { Dialog, DialogOverlay, TransitionChild, TransitionRoot } from '@headles
 import { documentation } from '../utils/Navigation'
 import { CalendarIcon, ChartBarIcon, FolderIcon, HomeIcon, InboxIcon, MenuIcon, UsersIcon, XIcon, MenuAlt2Icon } from '@heroicons/vue/outline'
 
-defineProps<{
-  title: string
-}>()
+defineProps<{ title: string }>()
 
 const sidebarOpen = ref(false)
 

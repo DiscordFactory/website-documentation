@@ -37,4 +37,12 @@ export const documentation = [
       { label: 'Deployment', href: '/documentation/deployment', isMenu: false },
     ]
   },
+  {
+    label: 'Example',
+    isMenu: true,
+    child: [
+      { label: 'Slash Command', href: '/documentation/examples/deployment', isMenu: false },
+      { label: 'Buttons', href: '/documentation/examples/buttons', isMenu: false },
+    ]
+  },
 ]

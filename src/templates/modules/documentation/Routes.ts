@@ -10,6 +10,8 @@ import Middleware from './base/Middleware.vue'
 import Hook from './base/Hook.vue'
 import Deployment from './advanced/Deployment.vue'
 import PartialHooks from './base/PartialHooks.vue'
+import ExampleSlashCommand from './examples/SlashCommand.vue'
+import ExampleButtons from './examples/Buttons.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/documentation/getting-started', component: GettingStarted },
@@ -24,6 +26,9 @@ const routes: RouteRecordRaw[] = [
   { path: '/documentation/hooks', component: Hook },
 
   { path: '/documentation/deployment', component: Deployment },
+
+  { path: '/documentation/examples/deployment', component: ExampleSlashCommand },
+  { path: '/documentation/examples/buttons', component: ExampleButtons },
 ]
 
 export default routes
