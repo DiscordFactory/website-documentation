@@ -29,6 +29,14 @@
       </p>
       <CodeHighlight class="w-min" :code="file" />
     </div>
+
+    <div class="space-y-5">
+      <h2>Issuing of events</h2>
+      <p>
+        Open a new terminal in your project and write the following command :
+      </p>
+      <img class="" src="../../../../assets/application-lifecycle.svg" alt="Workflow" />
+    </div>
   </Documentation>
 </template>
 

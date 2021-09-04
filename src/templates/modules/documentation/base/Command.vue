@@ -28,12 +28,21 @@
       </p>
       <CodeHighlight class="w-min" :code="file" />
     </div>
+
     <div class="space-y-5">
       <h2>Decorator options</h2>
       <p>
         A file will be created in the specified location otherwise in the root of your project with the following structure :
       </p>
       <CodeHighlight class="w-min" :code="decorator" />
+    </div>
+
+    <div class="space-y-5">
+      <h2>Operation of the controls</h2>
+      <p>
+        Open a new terminal in your project and write the following command :
+      </p>
+      <img class="" src="../../../../assets/application-command.svg" alt="Workflow" />
     </div>
   </Documentation>
 </template>

@@ -5,7 +5,6 @@
       The Discord Factory framework offers you the possibility to choose between 3 types of files :
     </p>
     <ul>
-      <li>• Env</li>
       <li>• Json</li>
       <li>• Yaml</li>
     </ul>
@@ -22,11 +21,6 @@
     <p>
       When you create a new project, you can choose between three types of environment :
     </p>
-
-    <div>
-      <h3>.env</h3>
-      <CodeHighlight :code="env" />
-    </div>
     <div>
       <h3>json</h3>
       <CodeHighlight :code="json" />
@@ -50,37 +44,6 @@ import LinkExternal from '../../../../components/LinkExternal.vue'
 import AlertWarn from '../../../../components/AlertWarn.vue'
 import AlertSuccess from '../../../../components/AlertSuccess.vue'
 import AlertInfo from '../../../../components/AlertInfo.vue'
-const env = `
-APP_PREFIX = "your prefix"
-APP_TOKEN = "your token"
-PRESET_COMMAND_AUTO_REMOVE = true
-
-PARTIAL_MESSAGE = true
-PARTIAL_CHANNEL = true
-PARTIAL_REACTION = true
-
-INTENT_GUILDS = true
-INTENT_GUILD_MEMBERS = true
-INTENT_GUILD_BANS = true
-INTENT_GUILD_EMOJIS_AND_STICKERS = true
-INTENT_GUILD_INTEGRATIONS = true
-INTENT_GUILD_WEBHOOKS = true
-INTENT_GUILD_INVITES = true
-INTENT_GUILD_VOICE_STATES = true
-INTENT_GUILD_PRESENCES = true
-INTENT_GUILD_MESSAGES = true
-INTENT_GUILD_MESSAGE_REACTIONS = true
-INTENT_GUILD_MESSAGE_TYPING = true
-INTENT_DIRECT_MESSAGES = true
-INTENT_DIRECT_MESSAGE_REACTIONS = true
-INTENT_DIRECT_MESSAGE_TYPING = true
-
-MESSAGE_COMMAND_MISSING_PERMISSION = "You're not authorized to execute this command"
-MESSAGE_COMMAND_MISSING_ROLES = "You're not authorized to execute this command"
-MESSAGE_ENVIRONMENT_FILE_PREFIX_MISSING = "The prefix is missing in the environment file."
-MESSAGE_ENVIRONMENT_FILE_TOKEN_MISSING = "The token is missing in the environment file."
-MESSAGE_ENVIRONMENT_FILE_MISSING = "Environment file is missing, please create one."
-`
 
 const json = `
 {
