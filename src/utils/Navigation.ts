@@ -14,14 +14,15 @@ export const socials = [
 ]
 
 export const documentation = [
+  { label: 'Getting starting', href: '/documentation/getting-started', isMenu: false },
   {
     label: 'Basic',
     isMenu: true,
     child: [
-      { label: 'Getting starting', href: '/documentation/getting-started', isMenu: false },
       { label: 'Starting', href: '/documentation/starting', isMenu: false },
       { label: 'Environment', href: '/documentation/environment', isMenu: false },
       { label: 'Structure', href: '/documentation/structure', isMenu: false },
+      { label: 'Partial Hoohs', href: '/documentation/partial-hooks', isMenu: false },
       { label: 'Commands', href: '/documentation/commands', isMenu: false },
       { label: 'Slash Commands', href: '/documentation/slash-commands', isMenu: false },
       { label: 'Events', href: '/documentation/events', isMenu: false },

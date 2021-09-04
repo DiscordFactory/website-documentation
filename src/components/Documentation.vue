@@ -119,7 +119,7 @@
                   v-else
                   :key="item.name"
                   :to="item.href"
-                  :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'w-full group flex items-center px-2 py-2 text-base font-medium rounded-md']">
+                  :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'w-1/2 ml-auto group flex items-center py-2 text-base font-medium rounded-md']">
                   {{ item.label }}
                 </router-link>
               </template>

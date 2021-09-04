@@ -9,12 +9,14 @@ import Event from './base/Event.vue'
 import Middleware from './base/Middleware.vue'
 import Hook from './base/Hook.vue'
 import Deployment from './advanced/Deployment.vue'
+import PartialHooks from './base/PartialHooks.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/documentation/getting-started', component: GettingStarted },
   { path: '/documentation/starting', component: Starting },
   { path: '/documentation/environment', component: Environment },
   { path: '/documentation/structure', component: Structure },
+  { path: '/documentation/partial-hooks', component: PartialHooks },
   { path: '/documentation/commands', component: Command },
   { path: '/documentation/slash-commands', component: SlashCommand },
   { path: '/documentation/events', component: Event },
