@@ -22,7 +22,7 @@ export const documentation = [
       { label: 'Starting', href: '/documentation/starting', isMenu: false },
       { label: 'Environment', href: '/documentation/environment', isMenu: false },
       { label: 'Structure', href: '/documentation/structure', isMenu: false },
-      { label: 'Partial Hoohs', href: '/documentation/partial-hooks', isMenu: false },
+      { label: 'Partial Hooks', href: '/documentation/partial-hooks', isMenu: false },
       { label: 'Commands', href: '/documentation/commands', isMenu: false },
       { label: 'Slash Commands', href: '/documentation/slash-commands', isMenu: false },
       { label: 'Events', href: '/documentation/events', isMenu: false },
