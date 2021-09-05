@@ -34,7 +34,7 @@
             <h2 class="text-3xl font-extrabold dark:text-white" id="join-heading">Join us on discord</h2>
             <p class="text-lg dark:text-white">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
             <LinkExternal
-              href="https://discord.gg/tQebEww8zG"
+              url="https://discord.gg/tQebEww8zG"
               class="block w-full py-3 px-5 text-center dark:bg-gray-600 border border-transparent rounded-md shadow-md text-base font-medium text-gray-700 hover:bg-gray-50 dark:text-white sm:inline-block sm:w-auto">
               Explore open positions
             </LinkExternal>

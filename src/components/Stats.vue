@@ -46,6 +46,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import axios from 'axios'
+import { DateTime } from 'luxon'
 
 const state = reactive({
   userCount: 0,
@@ -54,9 +55,9 @@ const state = reactive({
 })
 
 async function getData () {
-  const day = new Date()
-  const { data: users } = await axios.get(`https://api.npmjs.org/downloads/point/2020-01-01:${day.getFullYear()}-${day.getUTCMonth()}-${day.getUTCDay()}/@discord-factory/command`)
-  const { data: projects } = await axios.get(`https://api.npmjs.org/downloads/point/2020-01-01:${day.getFullYear()}-${day.getUTCMonth()}-${day.getUTCDay()}/@discord-factory/core`)
+  const now = DateTime.now().toFormat('yyyy-MM-dd')
+  const { data: users } = await axios.get(`https://api.npmjs.org/downloads/point/2020-01-01:${now}/@discord-factory/command`)
+  const { data: projects } = await axios.get(`https://api.npmjs.org/downloads/point/2020-01-01:${now}/@discord-factory/core`)
   const { data: discord } = await axios.get('https://discord.com/api/guilds/874056537444859984/widget.json')
 
   state.userCount = users.downloads
