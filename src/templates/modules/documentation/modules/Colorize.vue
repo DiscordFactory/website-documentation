@@ -14,7 +14,7 @@
     </div>
 
     <div class="space-y-5">
-      <h2>Color palet</h2>
+      <h2>Colour palette</h2>
       <ColorContainer />
     </div>
   </Documentation>
