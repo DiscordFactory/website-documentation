@@ -10,8 +10,9 @@ import Middleware from './base/Middleware.vue'
 import Hook from './base/Hook.vue'
 import Deployment from './advanced/Deployment.vue'
 import PartialHooks from './base/PartialHooks.vue'
-import ExampleSlashCommand from './examples/SlashCommand.vue'
+import PingPong from './examples/PingPong.vue'
 import ExampleButtons from './examples/Buttons.vue'
+import Colorize from './modules/Colorize.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/documentation/getting-started', component: GettingStarted },
@@ -27,7 +28,9 @@ const routes: RouteRecordRaw[] = [
 
   { path: '/documentation/deployment', component: Deployment },
 
-  { path: '/documentation/examples/deployment', component: ExampleSlashCommand },
+  { path: '/documentation/modules/colorize', component: Colorize },
+
+  { path: '/documentation/examples/ping-pong', component: PingPong },
   { path: '/documentation/examples/buttons', component: ExampleButtons },
 ]
 

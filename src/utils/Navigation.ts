@@ -38,10 +38,17 @@ export const documentation = [
     ]
   },
   {
+    label: 'Modules',
+    isMenu: true,
+    child: [
+      { label: 'Colorize', href: '/documentation/modules/colorize', isMenu: false },
+    ]
+  },
+  {
     label: 'Example',
     isMenu: true,
     child: [
-      { label: 'Slash Command', href: '/documentation/examples/deployment', isMenu: false },
+      { label: 'Ping pong', href: '/documentation/examples/ping-pong', isMenu: false },
       { label: 'Buttons', href: '/documentation/examples/buttons', isMenu: false },
     ]
   },
