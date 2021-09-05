@@ -6,10 +6,10 @@
     <div class="relative z-10 max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-          Trusted by developers from over 80 planets
+          Why wait to join us ?
         </h2>
         <p class="mt-3 text-xl text-indigo-200 sm:mt-4">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium.
+          The success of our platform is reflected in our figures
         </p>
       </div>
       <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8">
