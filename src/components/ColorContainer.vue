@@ -8,7 +8,7 @@
         <div
           v-for="color in item.colors"
           :class="color"
-          class="h-14 w-14"
+          class="h-14 w-14 cursor-pointer"
           :key="color"
           @click.prevent="handleChoose(color)">
         </div>
@@ -74,7 +74,9 @@ function handleChoose (color: string) {
 }
 
 function handleCopy () {
-  navigator.clipboard.writeText(popover.color.replace(/-/g, '_').toUpperCase())
+  navigator.clipboard.writeText(
+      popover.color.replace(/-/g, '_').toUpperCase()
+  )
   popover.show = false
   popover.color = null
 }
