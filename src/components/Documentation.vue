@@ -224,7 +224,7 @@ h5 {
   color: #204977;
 }
 h6 {
-  @apply text-lg leading-10 pt-10;
+  @apply text-lg leading-10 pt-2;
   color: #204977;
 }
 ul {

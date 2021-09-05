@@ -13,6 +13,7 @@ import PartialHooks from './base/PartialHooks.vue'
 import PingPong from './examples/PingPong.vue'
 import ExampleButtons from './examples/Buttons.vue'
 import Colorize from './modules/Colorize.vue'
+import Storage from './modules/Storage.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/documentation/getting-started', component: GettingStarted },
@@ -29,6 +30,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/documentation/deployment', component: Deployment },
 
   { path: '/documentation/modules/colorize', component: Colorize },
+  { path: '/documentation/modules/database-storage', component: Storage },
 
   { path: '/documentation/examples/ping-pong', component: PingPong },
   { path: '/documentation/examples/buttons', component: ExampleButtons },

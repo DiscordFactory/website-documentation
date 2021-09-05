@@ -42,6 +42,7 @@ export const documentation = [
     isMenu: true,
     child: [
       { label: 'Colorize', href: '/documentation/modules/colorize', isMenu: false },
+      { label: 'Database storage', href: '/documentation/modules/database-storage', isMenu: false },
     ]
   },
   {
