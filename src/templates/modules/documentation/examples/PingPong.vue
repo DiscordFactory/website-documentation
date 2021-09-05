@@ -8,12 +8,12 @@
     <div class="space-y-5">
       <h2>Basic reply with embed</h2>
       <p>
-        Returns the instance of the Discord Client linked to the bot.
+        First, we need to create an enumeration that will contain our different channels and their associated ID.
       </p>
       <CodeHighlight class="" :code="enum1" />
 
       <p>
-        Returns the instance of the Discord Client linked to the bot.
+        Next, we create the command using the slash command support of discord.js 13.
       </p>
       <CodeHighlight class="" :code="slashCommandWithEmbed" />
     </div>
