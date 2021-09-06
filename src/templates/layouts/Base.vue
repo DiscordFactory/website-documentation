@@ -21,13 +21,18 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import Navbar from '../../components/Navbar.vue'
 import Footer from '../../components/Footer.vue'
 
 let htmlStatut = ref(false)
-
 onMounted(() => {
   htmlStatut.value = document.documentElement.classList.contains('dark')
+})
+
+const route = useRoute()
+onMounted(() => $route.path, () => {
+  console.log('test')
 })
 
 function toggle () {
@@ -50,4 +55,5 @@ html, body {
   font-family: 'Public Sans', sans-serif;
   scroll-behavior: smooth;
 }
+
 </style>

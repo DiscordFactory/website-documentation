@@ -32,11 +32,13 @@
           </div>
           <div class="relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
             <h2 class="text-3xl font-extrabold dark:text-white" id="join-heading">Join us on discord</h2>
-            <p class="text-lg dark:text-white">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
+            <p class="text-lg dark:text-white">
+              Do you need help, want to discuss the project or participate in the adventure by suggesting improvements ? Join us at.
+            </p>
             <LinkExternal
               url="https://discord.gg/tQebEww8zG"
               class="block w-full py-3 px-5 text-center dark:bg-gray-600 border border-transparent rounded-md shadow-md text-base font-medium text-gray-700 hover:bg-gray-50 dark:text-white sm:inline-block sm:w-auto">
-              Explore open positions
+              Discover
             </LinkExternal>
           </div>
         </div>

@@ -31,7 +31,8 @@
     <div class="px-5 sm:px-0 text-center md:max-w-3xl md:mx-auto md:px-12">
       <h2 class="text-gray-800 dark:text-gray-200 text-3xl sm:text-4xl font-title font-semibold md:text-6xl">All discord.js features in one place</h2>
       <p class="text-lg mt-8 text-gray-500 md:text-xl">
-        AdonisJS is not a minimalist framework. To give your projects a head start, we pack many baseline features within the core of the framework.
+        Discord Factory is a simple to use but powerful framework thanks to the In Memory compilation.
+        Take advantage of the power of typescript associated with the Discord.js library
       </p>
     </div>
     <div class="max-w-6xl mx-auto">

@@ -5,7 +5,7 @@ import { CalendarIcon, ChartBarIcon, FolderIcon, HomeIcon, InboxIcon, UsersIcon 
 export const links: NavbarLink[] = [
   { label: 'Home', path: '/', local: true },
   { label: 'Documentation', path: '/documentation/getting-started', local: true },
-  { label: 'Discussion', path: '/https://github.com/DiscordFactory/Core/discussions', local: false }
+  { label: 'Discussion', path: 'https://github.com/DiscordFactory/Core/discussions', local: false }
 ]
 
 export const socials = [
