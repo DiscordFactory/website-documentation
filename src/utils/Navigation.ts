@@ -76,6 +76,7 @@ export enum markdownEndpoint {
   COLORIZE = 'https://raw.githubusercontent.com/DiscordFactory/colorize/master/README.md',
 
   DEPLOYMENT = 'https://raw.githubusercontent.com/DiscordFactory/core/master/doc/Deployment.md',
+  ADDON = 'https://raw.githubusercontent.com/DiscordFactory/core/master/doc/advanced/CreateAddon.md',
 
   PARTIAL_COMMAND = 'https://raw.githubusercontent.com/DiscordFactory/core/master/doc/partials/Command.md',
   PARTIAL_EVENT = 'https://raw.githubusercontent.com/DiscordFactory/core/master/doc/partials/Event.md',
