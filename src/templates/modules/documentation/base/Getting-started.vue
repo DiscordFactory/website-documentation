@@ -24,11 +24,15 @@ onMounted(async () => {
 <style lang="scss">
 .getting-started {
   .markdown-viewer {
+    display: block !important;
+    & > p:nth-child(2), & > p:last-child, & > p:nth-last-child(3) {
+      @apply flex md:flex-wrap md:space-x-2 overflow-x-scroll;
+    }
     & > img {
-      @apply w-1/3;
+      @apply md:w-1/3;
     }
     & > p {
-      @apply flex space-x-2;
+      @apply md:flex-wrap md:space-x-2 overflow-x-scroll;
       code {
         @apply bg-red-500;
       }
