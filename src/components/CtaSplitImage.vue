@@ -6,7 +6,7 @@
         <div class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">
           <div class="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
             <div class="bg-blue-900 rounded-xl aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1.5">
-              <img class="rounded-md" src="../assets/discord-banner.jpg" alt="Workflow" />
+              <img class="rounded-md object-cover" src="../assets/discord-banner.jpg" alt="Workflow" />
             </div>
           </div>
         </div>

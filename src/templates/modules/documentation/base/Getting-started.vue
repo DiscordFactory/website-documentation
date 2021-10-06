@@ -26,13 +26,13 @@ onMounted(async () => {
   .markdown-viewer {
     display: block !important;
     & > p:nth-child(2), & > p:last-child, & > p:nth-last-child(3) {
-      @apply flex md:flex-wrap md:space-x-2 overflow-x-scroll;
+      @apply flex md:flex-wrap md:space-x-2 overflow-x-auto;
     }
     & > img {
       @apply md:w-1/3;
     }
     & > p {
-      @apply md:flex-wrap md:space-x-2 overflow-x-scroll;
+      @apply md:flex-wrap md:space-x-2 overflow-x-auto;
       code {
         @apply bg-red-500;
       }

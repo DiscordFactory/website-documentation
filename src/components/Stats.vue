@@ -1,7 +1,7 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div class="relative bg-gray-800 rounded-xl overflow-hidden">
-    <img class="absolute" src="../assets/discord-background.png" alt="Workflow" />
+    <img class="absolute w-full h-full object-cover" src="../assets/discord-background.png" alt="Workflow" />
     <div class="absolute inset-0 bg-black opacity-25"></div>
     <div class="relative z-10 max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
       <div class="max-w-4xl mx-auto text-center">

@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 sm:px-0 flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5">
+  <div class="px-5 lg:px-0 flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5">
     <div class="sm:w-1/2">
       <Collapse
         :items="collapseHighlighting"
