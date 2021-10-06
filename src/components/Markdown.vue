@@ -65,7 +65,7 @@ h6 {
   }
 
   pre {
-    @apply bg-[#263238] overflow-x-scroll rounded-md leading-7 px-3 py-2;
+    @apply bg-[#263238] overflow-x-auto rounded-md leading-7 px-3 py-2;
     code {
       @apply text-[14px] text-[#bfbfbf];
       &.language {

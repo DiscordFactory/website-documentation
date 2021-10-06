@@ -75,14 +75,14 @@
     </TransitionRoot>
 
     <!-- Static sidebar for desktop -->
-    <div class="hidden sm:fixed pt-[40px] lg:pt-[64px] top-0 left-0 h-full md:flex md:flex-shrink-0">
-      <div class="flex flex-col lg:w-96">
+    <div class="hidden sm:fixed pt-[40px] xl:pt-[64px] top-0 left-0 h-full md:flex md:flex-shrink-0">
+      <div class="flex flex-col">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
-        <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300 overflow-y-auto">
+        <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300 overflow-y-auto lg:pl-5 xl:pl-10">
           <div class="flex-1 flex flex-col pt-5 pb-4 ">
             <nav class="mt-5 flex-1 px-2 space-y-5">
               <template v-for="item in documentation">
-                <div v-if="item.isMenu" class="lg:w-1/2 ml-auto">
+                <div v-if="item.isMenu" class="ml-auto">
                   <p class="text-blue-900 dark:text-gray-600 font-bold">{{ item.label }}</p>
                   <router-link
                     v-for="link in item.child"
@@ -92,7 +92,7 @@
                     {{ link.label }}
                   </router-link>
                 </div>
-                <div v-else class="lg:w-1/2 ml-auto">
+                <div v-else class="ml-auto">
                   <router-link
                     :key="item.name"
                     :to="item.href"
@@ -106,14 +106,14 @@
         </div>
       </div>
     </div>
-    <div class="md:px-50 lg:px-96 mx-auto flex flex-col flex-1 bg-gray-100 dark:bg-gray-800 dark:text-gray-600">
+    <div class="md:px-50 lg:px-54 xl:px-96 mx-auto flex flex-col flex-1 bg-gray-100 dark:bg-gray-800 dark:text-gray-600">
       <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
         <button type="button" class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="sidebarOpen = true">
           <span class="sr-only">Open sidebar</span>
           <MenuIcon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <main class="flex-1 relative z-0 md:w-[36rem] focus:outline-none">
+      <main class="flex-1 relative z-0 md:w-[36rem] lg:w-[40rem] xl:w-auto focus:outline-none">
         <div class="py-6 space-y-5">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 dark:text-gray-400 space-y-6">
             <slot />
@@ -123,8 +123,8 @@
     </div>
 
     <!-- Static toc for desktop -->
-    <div class="hidden lg:fixed top-0 right-0 pt-[64px] h-full md:flex md:flex-shrink-0">
-      <div class="flex flex-col w-64">
+    <div class="hidden lg:fixed top-0 right-0 md:pt-[40px] xl:pt-[64px] h-full md:flex md:flex-shrink-0">
+      <div class="flex flex-col lg:w-44 xl:w-64">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <div class="flex-1 flex flex-col min-h-0 border-l border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300">
           <div class="flex-1 flex flex-col pt-5 pb-4 ">
