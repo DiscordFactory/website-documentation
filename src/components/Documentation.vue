@@ -155,9 +155,10 @@ import { documentation } from '../utils/Navigation'
 import { CalendarIcon, ChartBarIcon, FolderIcon, HomeIcon, InboxIcon, MenuIcon, UsersIcon, XIcon, MenuAlt2Icon } from '@heroicons/vue/outline'
 
 const sidebarOpen = ref(false)
-
 let toc = ref([])
+
 onMounted(() => {
+  window.scroll(0, top + 20)
   setTimeout(() => {
     const elements = document.querySelectorAll('h2, h3')
     toc.value = Array.from(elements).map((element: HTMLElement) => ({
@@ -166,14 +167,14 @@ onMounted(() => {
         .toLowerCase()
         .replace(/ /g, '-')
     }))
-  }, 200)
+  }, 300)
 })
 
 function scrollMeTo (refName: string) {
   const element = document.getElementById(refName)
-  const top = element.offsetTop;
+  const top = element.offsetTop
 
-  window.scroll(0, top + 20);
+  window.scroll(0, top)
 }
 
 </script>
