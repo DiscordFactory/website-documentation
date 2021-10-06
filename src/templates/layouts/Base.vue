@@ -30,11 +30,6 @@ onMounted(() => {
   htmlStatut.value = document.documentElement.classList.contains('dark')
 })
 
-const route = useRoute()
-onMounted(() => $route.path, () => {
-  console.log('test')
-})
-
 function toggle () {
   const htmlRoot = document.documentElement as HTMLElement
   htmlRoot.classList.contains('dark')
