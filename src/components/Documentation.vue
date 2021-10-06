@@ -186,8 +186,8 @@ onMounted(() => {
     toc.value = Array.from(elements).map((element: HTMLElement) => ({
       label: element.innerText,
       id: element.innerText
-          .toLowerCase()
-          .replace(/ /g, '-')
+        .toLowerCase()
+        .replace(/ /g, '-')
     }))
   }, 200)
 })
