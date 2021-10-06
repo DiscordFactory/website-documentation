@@ -101,7 +101,7 @@
     <div class="hidden sm:fixed pt-[64px] top-0 left-0 h-full md:flex md:flex-shrink-0">
       <div class="flex flex-col w-96">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
-        <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300">
+        <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition duration-300 overflow-y-auto">
           <div class="flex-1 flex flex-col pt-5 pb-4 ">
             <nav class="mt-5 flex-1 px-2 space-y-5">
               <template v-for="item in documentation">
@@ -119,7 +119,7 @@
                   <router-link
                     :key="item.name"
                     :to="item.href"
-                    :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'group flex items-center py-2 text-base font-medium rounded-md']">
+                    :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100', 'group flex items-center p-2 w-full text-base font-medium rounded-md']">
                     {{ item.label }}
                   </router-link>
                 </div>
@@ -138,9 +138,6 @@
       </div>
       <main class="flex-1 relative z-0  focus:outline-none">
         <div class="py-6 space-y-5">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <h1 class="text-4xl font-semibold text-[#204977] dark:text-white">{{ title }}</h1>
-          </div>
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 dark:text-gray-400 space-y-6">
             <slot />
           </div>
@@ -180,25 +177,26 @@ import { Dialog, DialogOverlay, TransitionChild, TransitionRoot } from '@headles
 import { documentation } from '../utils/Navigation'
 import { CalendarIcon, ChartBarIcon, FolderIcon, HomeIcon, InboxIcon, MenuIcon, UsersIcon, XIcon, MenuAlt2Icon } from '@heroicons/vue/outline'
 
-defineProps<{ title: string }>()
-
 const sidebarOpen = ref(false)
 
-let toc = ref(null)
+let toc = ref([])
 onMounted(() => {
-  const elements = document.querySelectorAll('h2, h3, h4, h5, h6')
-  elements.forEach((element: HTMLElement) => element.id = `anchor-${element.innerText}`)
-  toc.value = Array.from(elements).map((element: HTMLElement) => ({
-    label: element.innerText,
-    id: `anchor-${element.innerText}`
-  }))
+  setTimeout(() => {
+    const elements = document.querySelectorAll('h2, h3')
+    toc.value = Array.from(elements).map((element: HTMLElement) => ({
+      label: element.innerText,
+      id: element.innerText
+          .toLowerCase()
+          .replace(/ /g, '-')
+    }))
+  }, 200)
 })
 
-function scrollMeTo (refName) {
+function scrollMeTo (refName: string) {
   const element = document.getElementById(refName)
   const top = element.offsetTop;
 
-  window.scroll(0, top - 64);
+  window.scroll(0, top + 20);
 }
 
 </script>
@@ -212,7 +210,7 @@ h2 {
   color: #204977;
 }
 h3 {
-  @apply text-2xl leading-10 pt-10;
+  @apply text-2xl leading-0 pt-16;
   color: #204977;
 }
 h4 {
@@ -221,10 +219,6 @@ h4 {
 }
 h5 {
   @apply text-xl leading-10 pt-10;
-  color: #204977;
-}
-h6 {
-  @apply text-lg leading-10 pt-2;
   color: #204977;
 }
 ul {
