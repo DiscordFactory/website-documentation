@@ -28,11 +28,11 @@
         <div class="flex justify-between">
           <div class="flex space-x-5">
             <div
-                class="h-10 w-10 rounded-md"
-                :class="popover.color"></div>
+              class="h-10 w-10 rounded-md"
+              :class="popover.color"></div>
             <div class="flex-col">
               <p>
-                {{ popover.color.replace(/-/g, '_').toUpperCase() }}
+                {{ popover.color.replace(/bg-/g, '').replace(/-/g, '_').toUpperCase() }}
               </p>
               <div class="mt-3 flex space-x-7">
                 <button
@@ -75,7 +75,10 @@ function handleChoose (color: string) {
 
 function handleCopy () {
   navigator.clipboard.writeText(
-      popover.color.replace(/-/g, '_').toUpperCase()
+      popover.color
+          .replace(/-/g, '_')
+          .toUpperCase()
+          .replace(/BG_/g, '')
   )
   popover.show = false
   popover.color = null
