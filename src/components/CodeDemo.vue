@@ -6,59 +6,69 @@
         @handleChange="handleChange" />
     </div>
     <div class="flex sm:w-1/2 bg-[#263238] rounded-lg overflow-hidden">
-      <transition
-        enter-active-class="transition ease-out duration-300"
+      <transition-group
+        enter-active-class="transition ease-out duration-100"
         enter-from-class="transform opacity-0"
         enter-to-class="transform opacity-100"
-        leave-active-class="transition ease-in duration-300"
+        leave-active-class="transition ease-in duration-100"
         leave-from-class="transform opacity-100"
         leave-to-class="transform opacity-0">
-        <CodeHighlight class="h-full" v-if="renderComponent" :code="currentFrame" />
-      </transition>
+        <Markdown v-if="renderComponent && activeFrame === 0" class="h-full" :source="event" />
+        <Markdown v-if="renderComponent && activeFrame === 1" class="h-full" :source="command" />
+        <Markdown v-if="renderComponent && activeFrame === 2" class="h-full" :source="contextMenu" />
+        <Markdown v-if="renderComponent && activeFrame === 3" class="h-full" :source="model" />
+      </transition-group>
     </div>
   </div>
 </template>
 
 <script setup lang='ts'>
+import Markdown from './Markdown.vue'
 import Collapse from './Collapse.vue'
-import CodeHighlight from './CodeHighlight.vue'
-import { ref, computed, nextTick } from 'vue'
-import { command, event, middleware, slashCommand } from '../utils/CodeHighlignt'
+import { computed, nextTick, ref } from 'vue'
+import useDocumentation from '../services/Documentation'
+import { markdownEndpoint } from '../utils/Navigation'
 
 let activeFrame = ref(0)
 let renderComponent = ref(true);
 
 function handleChange (key: number) {
-  activeFrame.value = key
   renderComponent.value = false
+  activeFrame.value = key
 
-  nextTick(() => {
+  setTimeout(() => {
     renderComponent.value = true;
-  });
+  }, 100)
 }
 
-const currentFrame = computed(() => collapseHighlighting[activeFrame.value].code)
+const event = ref('')
+const command = ref('')
+const contextMenu = ref('')
+const model = ref('')
+
+nextTick(async () => {
+  event.value = await useDocumentation(markdownEndpoint.PARTIAL_EVENT)
+  command.value = await useDocumentation(markdownEndpoint.PARTIAL_COMMAND)
+  contextMenu.value = await useDocumentation(markdownEndpoint.PARTIAL_CONTEXT_MENU)
+  model.value = await useDocumentation(markdownEndpoint.PARTIAL_MODEL)
+})
 
 const collapseHighlighting = [
   {
     label: 'Events',
     description: 'The use of events is the basis when developing a robot for discord. It is important to be able to create your own events quickly and efficiently. Discord Factory provides a command in the CLI that allows you to easily generate ready-to-use event files.',
-    code: event,
   },
   {
     label: 'Commands',
     description: 'The use of commands has become commonplace in the world of discord robots, it is important to be able to create your own commands quickly and efficiently. Discord Factory provides you with a command that allows you to easily generate ready-to-use command files.',
-    code: command,
   },
   {
-    label: 'Slash commands',
-    description: 'The use of commands has become commonplace in the world of discord robots, it is important to be able to create your own commands quickly and efficiently. Discord Factory provides you with a command that allows you to easily generate ready-to-use command files.',
-    code: slashCommand,
-  },
-  {
-    label: 'Middlewares',
+    label: 'Context menus',
     description: 'Middlewares are fragments of code that intervene upstream of one or several commands in order to authorise or not the execution. These fragments are governed by a regex that will allow you to create a single business logic applicable to the associated commands.',
-    code: middleware,
+  },
+  {
+    label: 'Models',
+    description: 'Models are used to interact with a database, they represent your tables from the database within your application. You can make full use of them by using the @discord-factory/storage-next module.',
   },
 ]
 </script>
