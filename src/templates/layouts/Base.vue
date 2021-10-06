@@ -1,10 +1,10 @@
 <template>
   <Navbar />
-    <main class="pt-[64px] bg-white dark:bg-gray-800 transition duration-300 min-h-screen pb-10">
+    <main class="pt-[64px] overflow-x-hidden bg-white dark:bg-gray-800 transition duration-300 min-h-screen pb-10">
       <RouterView />
       <button
         @click.prevent="toggle()"
-        class="fixed z-50 bottom-5 left-5 w-10 h-10 border-2 rounded focus:outline-none"
+        class="fixed z-50 bottom-5 right-5 sm:right-0 sm:left-5 w-10 h-10 border-2 rounded focus:outline-none"
         :class="isDark() ? 'bg-gray-800 border-white' : 'bg-white border-gray-800'">
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <svg v-if="isDark()" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,11 +28,6 @@ import Footer from '../../components/Footer.vue'
 let htmlStatut = ref(false)
 onMounted(() => {
   htmlStatut.value = document.documentElement.classList.contains('dark')
-})
-
-const route = useRoute()
-onMounted(() => $route.path, () => {
-  console.log('test')
 })
 
 function toggle () {

@@ -1,30 +1,47 @@
 <template>
-  <Documentation title="Getting started">
-    <p>
-      Are you tired of reinventing the wheel at the start of each project, and of spending too much time on how your bot will work?
-    </p>
-    <p>
-      The Discord Factory framework offers you a completely free development structure. You choose how you organize your application.
-    </p>
-    <p>
-      Creation, Structural, Behavioural or even Singleton, you can finally choose your own design pattern without being forced to modify the whole functioning of your project.
-    </p>
-    <ul>
-      <li>🧪 Mode flexibility, no limits. You are free to create your own architecture.</li>
-      <li>⚡ Factory includes "in memory" compilation to make the compilation of your application more efficient.</li>
-      <li>📦 Learn and create in a powerful development environment with the various tools Discord Factory offers.</li>
-    </ul>
-    <p>
-      It's now up to you!
-    </p>
+  <Documentation>
+    <div class="getting-started">
+      <Markdown v-if="data" :source="data" />
+      <Spinner v-else />
+    </div>
   </Documentation>
 </template>
 
 <script setup lang="ts">
+import Markdown from '../../../../components/Markdown.vue'
 import Documentation from '../../../../components/Documentation.vue'
+import Spinner from '../../../../components/Spinner.vue'
+import useDocumentation from '../../../../services/Documentation'
+import { markdownEndpoint } from '../../../../utils/Navigation'
+import { onMounted, ref } from 'vue'
 
+const data = ref('')
+onMounted(async () => {
+  data.value = await useDocumentation(markdownEndpoint.GETTING_STARTED)
+})
 </script>
 
-<style>
-
+<style lang="scss">
+.getting-started {
+  .markdown-viewer {
+    display: block !important;
+    & > p:nth-child(2), & > p:last-child, & > p:nth-last-child(3) {
+      @apply flex md:flex-wrap md:space-x-2 overflow-x-auto;
+    }
+    & > img {
+      @apply md:w-1/3;
+    }
+    & > p {
+      @apply md:flex-wrap md:space-x-2 overflow-x-auto;
+      code {
+        @apply bg-red-500;
+      }
+    }
+    blockquote {
+      code {
+        @apply bg-white dark:bg-gray-600 p-1 rounded-md;
+      }
+    }
+  }
+}
 </style>

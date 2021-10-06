@@ -1,7 +1,7 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div class="relative bg-gray-800 rounded-xl overflow-hidden">
-    <img class="absolute" src="../assets/discord-background.png" alt="Workflow" />
+    <img class="absolute w-full h-full object-cover" src="../assets/discord-background.png" alt="Workflow" />
     <div class="absolute inset-0 bg-black opacity-25"></div>
     <div class="relative z-10 max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
       <div class="max-w-4xl mx-auto text-center">
@@ -56,8 +56,8 @@ const state = reactive({
 
 async function getData () {
   const now = DateTime.now().toFormat('yyyy-MM-dd')
-  const { data: users } = await axios.get(`https://api.npmjs.org/downloads/point/2020-01-01:${now}/@discord-factory/command`)
-  const { data: projects } = await axios.get(`https://api.npmjs.org/downloads/point/2020-01-01:${now}/@discord-factory/core`)
+  const { data: users } = await axios.get(`https://api.npmjs.org/downloads/point/2021-09-01:${now}/create-factory-app`)
+  const { data: projects } = await axios.get(`https://api.npmjs.org/downloads/point/2021-09-01:${now}/@discord-factory/core`)
   const { data: discord } = await axios.get('https://discord.com/api/guilds/874056537444859984/widget.json')
 
   state.userCount = users.downloads

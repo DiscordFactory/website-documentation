@@ -15,6 +15,6 @@ import { onMounted, ref } from 'vue'
 
 const data = ref('')
 onMounted(async () => {
-  data.value = await useDocumentation(markdownEndpoint.STRUCTURE)
+  data.value = await useDocumentation(markdownEndpoint.MESSAGE_COMMAND)
 })
 </script>
